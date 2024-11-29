@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import streamlit
 import streamlit_nested_layout  # unofficial package for nested layout
 
-import data
+import updated_data
 import plots
 import utils
 from config import app_config
