@@ -1,13 +1,11 @@
-"""handles dashboard filters"""
-
-import updated_data
+import updated_data as data  # Ganti data dengan updated_data
 import streamlit as st
 
 
 def apply(df):
     """filters the dataframe using active filters and returns the filtered dataframe"""
     ### get all filters elements to be build from the dataset
-    filter_elem = data.get_filter_options(df)
+    filter_elem = data.get_filter_options(df)  # Pastikan fungsi ini didefinisikan di updated_data.py
     ### build the filter UI
     curr_filter_ui = __build_filter_ui(df, filter_elem)
     ### read the session state and apply filter on the dataframe
