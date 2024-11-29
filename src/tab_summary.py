@@ -28,7 +28,7 @@ def __show_sample_data(df: pd.DataFrame):
         utils.download_file(
             btn_label="Download As CSV",
             data=csv,
-            file_name="hr_data_downloaded.csv",
+            file_name="raw_hr_data.csv",
             mime_type="text/csv",
         )
 
