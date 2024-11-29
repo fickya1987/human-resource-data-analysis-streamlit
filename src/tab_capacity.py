@@ -3,7 +3,7 @@
 import pandas as pd
 import streamlit
 import utils
-import data
+import updated_data
 import plots
 
 
