@@ -54,3 +54,8 @@ def get_retrench_count(df: DataFrame):
     retrench_pct = round((retrench_cnt / tot_emp_cnt) * 100, 2)
     not_retrench_pct = round((not_retrench_cnt / tot_emp_cnt) * 100, 2)
     return retrench_cnt, not_retrench_cnt, retrench_pct, not_retrench_pct
+
+
+def df_to_csv(df: DataFrame) -> bytes:
+    """Converts DataFrame to CSV format for download"""
+    return df.to_csv(index=False).encode("utf-8")
