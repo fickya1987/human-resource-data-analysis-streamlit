@@ -1,6 +1,6 @@
 """handles dashboard filters"""
 
-import data
+import updated_data
 import streamlit as st
 
 
