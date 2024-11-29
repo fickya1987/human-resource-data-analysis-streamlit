@@ -24,7 +24,7 @@ def __show_sample_data(df: pd.DataFrame):
         st.markdown("#### Bottom 5 rows")
         st.dataframe(df.tail(5))
         # Read the file again and then download
-        csv = data.df_to_csv(app_config.data_file)  # Revisi untuk menggunakan updated_data
+        csv = data.df_to_csv(df)  # df adalah DataFrame yang sudah dimuat sebelumnya
         utils.download_file(
             btn_label="Download As CSV",
             data=csv,
