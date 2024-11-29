@@ -44,6 +44,17 @@ def get_filter_options(df, empty_filters=False):
     return filter_opt
 
 
+def get_gender_count(df: DataFrame):
+    """Calculates employee total count and for each gender,
+    returns count and percentage as result"""
+    male_emp_cnt = len(df[df["Gender"] == "Male"])
+    female_emp_cnt = len(df[df["Gender"] == "Female"])
+    tot_emp_cnt = male_emp_cnt + female_emp_cnt
+    male_pct = round((male_emp_cnt / tot_emp_cnt) * 100, 2) if tot_emp_cnt > 0 else 0
+    female_pct = round((female_emp_cnt / tot_emp_cnt) * 100, 2) if tot_emp_cnt > 0 else 0
+    return tot_emp_cnt, male_emp_cnt, female_emp_cnt, male_pct, female_pct
+
+
 def get_retrench_count(df: DataFrame):
     """Calculates number of employees due for retrenchment,
     returns count and percentage as result"""
