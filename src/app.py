@@ -1,10 +1,9 @@
-
 from config import app_config  
-import data
+import updated_data as data  # Ensure updated_data.py is used
 import tab_capacity
 import tab_summary
 import tab_attrition
-import tab_promotion  # Newly added promotion module
+import tab_promotion  # New module for promotion analysis
 import utils
 import filters
 
